@@ -7,22 +7,25 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/mike')
+@app.route('/about')
 def mike():
-    return render_template('mike.html')
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-@app.route('/add', method=['POST'])
+<main>
+@app.route('/add', methods=['POST'])
 def submit_form():
-
+   
     data = {
         'name': request.form['name'],
         'email': request.form['email'],
-        'additional comments': request.form['additional comments']
+        'comments': request.form['comments']
     }
-
+   
+   
     data_list.append(data)
-
+   
     return redirect('/')
+</main>
