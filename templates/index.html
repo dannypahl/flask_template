@@ -1,6 +1,68 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<nav>
+    <a href="base.html" > Home</a>
+    <br>
+    <a href="about.html" > About</a>
+</nav>  
+<form>
+<fieldset> 
+    <legend> Contact Information</legend>
+    <div> 
+        <label for="fname" > First name:
+            <input id="fname" type="text" autofocus required>
+        </label>
+    </div>
+    <div>
+        <label for="lname" > Last Name: 
+            <input id="lname" type="text" required>
+        </label>
+    </div><div> 
+        <label for="email" > Email Address:
+            <input id="email" type="email" required>
+        </label>
+        </div><div>
+        <label for="phonenumber" > Phone Number:
+            <input type="tel" id="phonenumber" name="phonenumber" maxlength="10" required> 
+        </label> 
+    </div>
+</fieldset>
+<fieldset> 
+    <legend> Gender </legend>
+    <div><label for="female">
+        <input type="radio" id="female" name="gender" value="female" > Female
+    </label>
 
-{% block title %} Welcome to the home page {% endblock %}
+    <label for="male">
+        <input type="radio" id="male" name="gender" value="male" > Male
+    </label>
 
+    <label for="non-binary" > 
+        <input type="radio" id="non-binary" name="gender" value="non-binary" > Non-binary
+    </label>
+    <label for="prefer-not-to-say" >
+        <input type="radio" id="prefer-not-to-say" name="gender" value="prefer-not-to-say" > Prefer not to say
+    </label>
+    </div>
+</fieldset>
+<br>
+<fieldset>
+    <legend> Education </legend>
+     <label for="dropdown">Select an option:</label>
+    <select id="dropdown" name="dropdown">
+    <option value="option1">Did not complete high school</option>
+    <option value="option2">High school degree</option>
+    <option value="option3">Bachelors degree</option>
+    <option value="option4">Master's degree</option>
+    <option value="option5">Doctorate's degree</option>
+     <option value="option6">Other</option>
+    </select>
+    </fieldset>
+   <br>
 
-{% block body %} Hello world! {% endblock %}
+</form>
