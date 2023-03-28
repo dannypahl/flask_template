@@ -14,6 +14,7 @@ def mike():
 if __name__ == '__main__':
     app.run(debug=True)
 
+<main>
 @app.route('/add', methods=['POST'])
 def submit_form():
    
@@ -27,3 +28,4 @@ def submit_form():
     data_list.append(data)
    
     return redirect('/')
+</main>
