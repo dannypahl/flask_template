@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} {% endblock%}</title>
+    <title>Pair Programming </title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 </head>
 <nav>
     <a href="base.html" > Home </a>
+    <br>
+    <a href="index.html" >Main </a>
 </nav>
 <body>
     <div>
@@ -16,7 +18,14 @@
 
         <hr>
         <br>
-        
+        {% if data_list %}
+    <h2>Messages:</h2>
+    <ul>
+    {% for data in data_list %}
+        <li>{{ data['name'] }} - {{ data['email'] }} - {{ data['message'] }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
     
 
     </div>
