@@ -6,6 +6,9 @@
     <title>{% block title %} {% endblock%}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 </head>
+<nav>
+    <a href="base.html" > Home </a>
+</nav>
 <body>
     <div>
         <h1>Danny Pahl and Ryan Marques</h1>
@@ -14,9 +17,7 @@
         <hr>
         <br>
         
-        {% block body %}
-
-        {% endblock %}
+    
 
     </div>
 </body>
